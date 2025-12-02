@@ -1,0 +1,37 @@
+{
+    "epochs": [
+        0,
+        1
+    ],
+    "train_losses": [
+        3.2719082832336426,
+        3.247370719909668
+    ],
+    "valid_losses": [
+        3.271684169769287,
+        3.225684404373169
+    ],
+    "train_accs": [
+        0.03354807570576668,
+        0.07147115468978882
+    ],
+    "valid_accs": [
+        0.033173076808452606,
+        0.07269230484962463
+    ],
+    "final_train_acc": 0.07147115468978882,
+    "best_val_acc": 0.07269230484962463,
+    "test_acc": 0.07038461416959763,
+    "config": {
+        "batch_size": 128,
+        "hidden_size": 16,
+        "layers": 1,
+        "learning_rate": 0.001,
+        "l2_decay": 0.0,
+        "dropout": 0.0,
+        "activation": "relu",
+        "optimizer": "sgd",
+        "epochs": 1,
+        "model": "sanity"
+    }
+}

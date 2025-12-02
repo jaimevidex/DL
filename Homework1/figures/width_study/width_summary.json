@@ -1,0 +1,879 @@
+{
+  "widths": [
+    {
+      "width": 16,
+      "best": {
+        "width": 16,
+        "learning_rate": 0.001,
+        "dropout": 0.0,
+        "l2_decay": 0.0001,
+        "best_val_acc": 0.7809134721755981,
+        "final_train_acc": 0.7927307486534119,
+        "test_acc": 0.7837018966674805,
+        "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width16_lr0.001_drop0.0_wd0.0001.json"
+      },
+      "runs": [
+        {
+          "width": 16,
+          "learning_rate": 0.0001,
+          "dropout": 0.0,
+          "l2_decay": 0.0,
+          "best_val_acc": 0.7223076820373535,
+          "final_train_acc": 0.7291730642318726,
+          "test_acc": 0.724711537361145,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width16_lr0.0001_drop0.0_wd0.0.json"
+        },
+        {
+          "width": 16,
+          "learning_rate": 0.0001,
+          "dropout": 0.0,
+          "l2_decay": 0.0001,
+          "best_val_acc": 0.7121154069900513,
+          "final_train_acc": 0.7189711332321167,
+          "test_acc": 0.7124519348144531,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width16_lr0.0001_drop0.0_wd0.0001.json"
+        },
+        {
+          "width": 16,
+          "learning_rate": 0.0001,
+          "dropout": 0.2,
+          "l2_decay": 0.0,
+          "best_val_acc": 0.7024038434028625,
+          "final_train_acc": 0.7078173160552979,
+          "test_acc": 0.7035576701164246,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width16_lr0.0001_drop0.2_wd0.0.json"
+        },
+        {
+          "width": 16,
+          "learning_rate": 0.0001,
+          "dropout": 0.2,
+          "l2_decay": 0.0001,
+          "best_val_acc": 0.7024038434028625,
+          "final_train_acc": 0.7059519290924072,
+          "test_acc": 0.7000480890274048,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width16_lr0.0001_drop0.2_wd0.0001.json"
+        },
+        {
+          "width": 16,
+          "learning_rate": 0.0003,
+          "dropout": 0.0,
+          "l2_decay": 0.0,
+          "best_val_acc": 0.7531730532646179,
+          "final_train_acc": 0.7605865597724915,
+          "test_acc": 0.7490384578704834,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width16_lr0.0003_drop0.0_wd0.0.json"
+        },
+        {
+          "width": 16,
+          "learning_rate": 0.0003,
+          "dropout": 0.0,
+          "l2_decay": 0.0001,
+          "best_val_acc": 0.7502403855323792,
+          "final_train_acc": 0.7565961480140686,
+          "test_acc": 0.7510096430778503,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width16_lr0.0003_drop0.0_wd0.0001.json"
+        },
+        {
+          "width": 16,
+          "learning_rate": 0.0003,
+          "dropout": 0.2,
+          "l2_decay": 0.0,
+          "best_val_acc": 0.7209615111351013,
+          "final_train_acc": 0.7229134440422058,
+          "test_acc": 0.7172115445137024,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width16_lr0.0003_drop0.2_wd0.0.json"
+        },
+        {
+          "width": 16,
+          "learning_rate": 0.0003,
+          "dropout": 0.2,
+          "l2_decay": 0.0001,
+          "best_val_acc": 0.7253845930099487,
+          "final_train_acc": 0.7337596416473389,
+          "test_acc": 0.7239422798156738,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width16_lr0.0003_drop0.2_wd0.0001.json"
+        },
+        {
+          "width": 16,
+          "learning_rate": 0.001,
+          "dropout": 0.0,
+          "l2_decay": 0.0,
+          "best_val_acc": 0.7561538219451904,
+          "final_train_acc": 0.7688365578651428,
+          "test_acc": 0.7564904093742371,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width16_lr0.001_drop0.0_wd0.0.json"
+        },
+        {
+          "width": 16,
+          "learning_rate": 0.001,
+          "dropout": 0.0,
+          "l2_decay": 0.0001,
+          "best_val_acc": 0.7809134721755981,
+          "final_train_acc": 0.7927307486534119,
+          "test_acc": 0.7837018966674805,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width16_lr0.001_drop0.0_wd0.0001.json"
+        },
+        {
+          "width": 16,
+          "learning_rate": 0.001,
+          "dropout": 0.2,
+          "l2_decay": 0.0,
+          "best_val_acc": 0.7398557662963867,
+          "final_train_acc": 0.7483749985694885,
+          "test_acc": 0.733269214630127,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width16_lr0.001_drop0.2_wd0.0.json"
+        },
+        {
+          "width": 16,
+          "learning_rate": 0.001,
+          "dropout": 0.2,
+          "l2_decay": 0.0001,
+          "best_val_acc": 0.7462019324302673,
+          "final_train_acc": 0.7521730661392212,
+          "test_acc": 0.7447115182876587,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width16_lr0.001_drop0.2_wd0.0001.json"
+        },
+        {
+          "width": 16,
+          "learning_rate": 0.003,
+          "dropout": 0.0,
+          "l2_decay": 0.0,
+          "best_val_acc": 0.7594711780548096,
+          "final_train_acc": 0.7720192074775696,
+          "test_acc": 0.7632211446762085,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width16_lr0.003_drop0.0_wd0.0.json"
+        },
+        {
+          "width": 16,
+          "learning_rate": 0.003,
+          "dropout": 0.0,
+          "l2_decay": 0.0001,
+          "best_val_acc": 0.775865375995636,
+          "final_train_acc": 0.7875673174858093,
+          "test_acc": 0.7785577178001404,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width16_lr0.003_drop0.0_wd0.0001.json"
+        },
+        {
+          "width": 16,
+          "learning_rate": 0.003,
+          "dropout": 0.2,
+          "l2_decay": 0.0,
+          "best_val_acc": 0.7013461589813232,
+          "final_train_acc": 0.710365355014801,
+          "test_acc": 0.6947596073150635,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width16_lr0.003_drop0.2_wd0.0.json"
+        },
+        {
+          "width": 16,
+          "learning_rate": 0.003,
+          "dropout": 0.2,
+          "l2_decay": 0.0001,
+          "best_val_acc": 0.7364903688430786,
+          "final_train_acc": 0.742432713508606,
+          "test_acc": 0.7347115278244019,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width16_lr0.003_drop0.2_wd0.0001.json"
+        }
+      ]
+    },
+    {
+      "width": 32,
+      "best": {
+        "width": 32,
+        "learning_rate": 0.001,
+        "dropout": 0.0,
+        "l2_decay": 0.0001,
+        "best_val_acc": 0.844278872013092,
+        "final_train_acc": 0.8636826872825623,
+        "test_acc": 0.8450000286102295,
+        "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width32_lr0.001_drop0.0_wd0.0001.json"
+      },
+      "runs": [
+        {
+          "width": 32,
+          "learning_rate": 0.0001,
+          "dropout": 0.0,
+          "l2_decay": 0.0,
+          "best_val_acc": 0.801105797290802,
+          "final_train_acc": 0.8095576763153076,
+          "test_acc": 0.8019711375236511,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width32_lr0.0001_drop0.0_wd0.0.json"
+        },
+        {
+          "width": 32,
+          "learning_rate": 0.0001,
+          "dropout": 0.0,
+          "l2_decay": 0.0001,
+          "best_val_acc": 0.8009134531021118,
+          "final_train_acc": 0.8072596192359924,
+          "test_acc": 0.7988461256027222,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width32_lr0.0001_drop0.0_wd0.0001.json"
+        },
+        {
+          "width": 32,
+          "learning_rate": 0.0001,
+          "dropout": 0.2,
+          "l2_decay": 0.0,
+          "best_val_acc": 0.7836057543754578,
+          "final_train_acc": 0.7906442284584045,
+          "test_acc": 0.786057710647583,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width32_lr0.0001_drop0.2_wd0.0.json"
+        },
+        {
+          "width": 32,
+          "learning_rate": 0.0001,
+          "dropout": 0.2,
+          "l2_decay": 0.0001,
+          "best_val_acc": 0.7876923084259033,
+          "final_train_acc": 0.7930769324302673,
+          "test_acc": 0.7889903783798218,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width32_lr0.0001_drop0.2_wd0.0001.json"
+        },
+        {
+          "width": 32,
+          "learning_rate": 0.0003,
+          "dropout": 0.0,
+          "l2_decay": 0.0,
+          "best_val_acc": 0.8229807615280151,
+          "final_train_acc": 0.8410000205039978,
+          "test_acc": 0.8235576748847961,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width32_lr0.0003_drop0.0_wd0.0.json"
+        },
+        {
+          "width": 32,
+          "learning_rate": 0.0003,
+          "dropout": 0.0,
+          "l2_decay": 0.0001,
+          "best_val_acc": 0.8380288481712341,
+          "final_train_acc": 0.8498653769493103,
+          "test_acc": 0.8367788195610046,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width32_lr0.0003_drop0.0_wd0.0001.json"
+        },
+        {
+          "width": 32,
+          "learning_rate": 0.0003,
+          "dropout": 0.2,
+          "l2_decay": 0.0,
+          "best_val_acc": 0.817932665348053,
+          "final_train_acc": 0.8259711265563965,
+          "test_acc": 0.8151442408561707,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width32_lr0.0003_drop0.2_wd0.0.json"
+        },
+        {
+          "width": 32,
+          "learning_rate": 0.0003,
+          "dropout": 0.2,
+          "l2_decay": 0.0001,
+          "best_val_acc": 0.8092788457870483,
+          "final_train_acc": 0.8225961327552795,
+          "test_acc": 0.8140384554862976,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width32_lr0.0003_drop0.2_wd0.0001.json"
+        },
+        {
+          "width": 32,
+          "learning_rate": 0.001,
+          "dropout": 0.0,
+          "l2_decay": 0.0,
+          "best_val_acc": 0.8422115445137024,
+          "final_train_acc": 0.8607884645462036,
+          "test_acc": 0.8403365612030029,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width32_lr0.001_drop0.0_wd0.0.json"
+        },
+        {
+          "width": 32,
+          "learning_rate": 0.001,
+          "dropout": 0.0,
+          "l2_decay": 0.0001,
+          "best_val_acc": 0.844278872013092,
+          "final_train_acc": 0.8636826872825623,
+          "test_acc": 0.8450000286102295,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width32_lr0.001_drop0.0_wd0.0001.json"
+        },
+        {
+          "width": 32,
+          "learning_rate": 0.001,
+          "dropout": 0.2,
+          "l2_decay": 0.0,
+          "best_val_acc": 0.8237500190734863,
+          "final_train_acc": 0.8364230990409851,
+          "test_acc": 0.8205769062042236,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width32_lr0.001_drop0.2_wd0.0.json"
+        },
+        {
+          "width": 32,
+          "learning_rate": 0.001,
+          "dropout": 0.2,
+          "l2_decay": 0.0001,
+          "best_val_acc": 0.8222115635871887,
+          "final_train_acc": 0.8356730937957764,
+          "test_acc": 0.8229807615280151,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width32_lr0.001_drop0.2_wd0.0001.json"
+        },
+        {
+          "width": 32,
+          "learning_rate": 0.003,
+          "dropout": 0.0,
+          "l2_decay": 0.0,
+          "best_val_acc": 0.8347595930099487,
+          "final_train_acc": 0.8596153855323792,
+          "test_acc": 0.833509624004364,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width32_lr0.003_drop0.0_wd0.0.json"
+        },
+        {
+          "width": 32,
+          "learning_rate": 0.003,
+          "dropout": 0.0,
+          "l2_decay": 0.0001,
+          "best_val_acc": 0.8289422988891602,
+          "final_train_acc": 0.8466730713844299,
+          "test_acc": 0.8302884697914124,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width32_lr0.003_drop0.0_wd0.0001.json"
+        },
+        {
+          "width": 32,
+          "learning_rate": 0.003,
+          "dropout": 0.2,
+          "l2_decay": 0.0,
+          "best_val_acc": 0.7973557710647583,
+          "final_train_acc": 0.8152019381523132,
+          "test_acc": 0.8009615540504456,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width32_lr0.003_drop0.2_wd0.0.json"
+        },
+        {
+          "width": 32,
+          "learning_rate": 0.003,
+          "dropout": 0.2,
+          "l2_decay": 0.0001,
+          "best_val_acc": 0.8161057829856873,
+          "final_train_acc": 0.8296346068382263,
+          "test_acc": 0.8201442360877991,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width32_lr0.003_drop0.2_wd0.0001.json"
+        }
+      ]
+    },
+    {
+      "width": 64,
+      "best": {
+        "width": 64,
+        "learning_rate": 0.001,
+        "dropout": 0.0,
+        "l2_decay": 0.0001,
+        "best_val_acc": 0.8805288672447205,
+        "final_train_acc": 0.9088365435600281,
+        "test_acc": 0.8797115087509155,
+        "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width64_lr0.001_drop0.0_wd0.0001.json"
+      },
+      "runs": [
+        {
+          "width": 64,
+          "learning_rate": 0.0001,
+          "dropout": 0.0,
+          "l2_decay": 0.0,
+          "best_val_acc": 0.8508173227310181,
+          "final_train_acc": 0.8603076934814453,
+          "test_acc": 0.849134624004364,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width64_lr0.0001_drop0.0_wd0.0.json"
+        },
+        {
+          "width": 64,
+          "learning_rate": 0.0001,
+          "dropout": 0.0,
+          "l2_decay": 0.0001,
+          "best_val_acc": 0.8459615111351013,
+          "final_train_acc": 0.8586826920509338,
+          "test_acc": 0.8450480699539185,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width64_lr0.0001_drop0.0_wd0.0001.json"
+        },
+        {
+          "width": 64,
+          "learning_rate": 0.0001,
+          "dropout": 0.2,
+          "l2_decay": 0.0,
+          "best_val_acc": 0.8419230580329895,
+          "final_train_acc": 0.8533557653427124,
+          "test_acc": 0.8430769443511963,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width64_lr0.0001_drop0.2_wd0.0.json"
+        },
+        {
+          "width": 64,
+          "learning_rate": 0.0001,
+          "dropout": 0.2,
+          "l2_decay": 0.0001,
+          "best_val_acc": 0.8461538553237915,
+          "final_train_acc": 0.8548365235328674,
+          "test_acc": 0.8450961709022522,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width64_lr0.0001_drop0.2_wd0.0001.json"
+        },
+        {
+          "width": 64,
+          "learning_rate": 0.0003,
+          "dropout": 0.0,
+          "l2_decay": 0.0,
+          "best_val_acc": 0.8712499737739563,
+          "final_train_acc": 0.8964326977729797,
+          "test_acc": 0.8713942170143127,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width64_lr0.0003_drop0.0_wd0.0.json"
+        },
+        {
+          "width": 64,
+          "learning_rate": 0.0003,
+          "dropout": 0.0,
+          "l2_decay": 0.0001,
+          "best_val_acc": 0.8723077178001404,
+          "final_train_acc": 0.8955961465835571,
+          "test_acc": 0.8725481033325195,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width64_lr0.0003_drop0.0_wd0.0001.json"
+        },
+        {
+          "width": 64,
+          "learning_rate": 0.0003,
+          "dropout": 0.2,
+          "l2_decay": 0.0,
+          "best_val_acc": 0.8614903688430786,
+          "final_train_acc": 0.8819711804389954,
+          "test_acc": 0.8650000095367432,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width64_lr0.0003_drop0.2_wd0.0.json"
+        },
+        {
+          "width": 64,
+          "learning_rate": 0.0003,
+          "dropout": 0.2,
+          "l2_decay": 0.0001,
+          "best_val_acc": 0.8669711351394653,
+          "final_train_acc": 0.8809230923652649,
+          "test_acc": 0.8667307496070862,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width64_lr0.0003_drop0.2_wd0.0001.json"
+        },
+        {
+          "width": 64,
+          "learning_rate": 0.001,
+          "dropout": 0.0,
+          "l2_decay": 0.0,
+          "best_val_acc": 0.8796634674072266,
+          "final_train_acc": 0.9173269271850586,
+          "test_acc": 0.8754326701164246,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width64_lr0.001_drop0.0_wd0.0.json"
+        },
+        {
+          "width": 64,
+          "learning_rate": 0.001,
+          "dropout": 0.0,
+          "l2_decay": 0.0001,
+          "best_val_acc": 0.8805288672447205,
+          "final_train_acc": 0.9088365435600281,
+          "test_acc": 0.8797115087509155,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width64_lr0.001_drop0.0_wd0.0001.json"
+        },
+        {
+          "width": 64,
+          "learning_rate": 0.001,
+          "dropout": 0.2,
+          "l2_decay": 0.0,
+          "best_val_acc": 0.8714903593063354,
+          "final_train_acc": 0.8955865502357483,
+          "test_acc": 0.8697115182876587,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width64_lr0.001_drop0.2_wd0.0.json"
+        },
+        {
+          "width": 64,
+          "learning_rate": 0.001,
+          "dropout": 0.2,
+          "l2_decay": 0.0001,
+          "best_val_acc": 0.8700000047683716,
+          "final_train_acc": 0.8901538252830505,
+          "test_acc": 0.8700961470603943,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width64_lr0.001_drop0.2_wd0.0001.json"
+        },
+        {
+          "width": 64,
+          "learning_rate": 0.003,
+          "dropout": 0.0,
+          "l2_decay": 0.0,
+          "best_val_acc": 0.8662499785423279,
+          "final_train_acc": 0.9060384631156921,
+          "test_acc": 0.8632211685180664,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width64_lr0.003_drop0.0_wd0.0.json"
+        },
+        {
+          "width": 64,
+          "learning_rate": 0.003,
+          "dropout": 0.0,
+          "l2_decay": 0.0001,
+          "best_val_acc": 0.8724038600921631,
+          "final_train_acc": 0.8960000276565552,
+          "test_acc": 0.8740865588188171,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width64_lr0.003_drop0.0_wd0.0001.json"
+        },
+        {
+          "width": 64,
+          "learning_rate": 0.003,
+          "dropout": 0.2,
+          "l2_decay": 0.0,
+          "best_val_acc": 0.8463461399078369,
+          "final_train_acc": 0.869240403175354,
+          "test_acc": 0.842067301273346,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width64_lr0.003_drop0.2_wd0.0.json"
+        },
+        {
+          "width": 64,
+          "learning_rate": 0.003,
+          "dropout": 0.2,
+          "l2_decay": 0.0001,
+          "best_val_acc": 0.8559134602546692,
+          "final_train_acc": 0.8733077049255371,
+          "test_acc": 0.8566346168518066,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width64_lr0.003_drop0.2_wd0.0001.json"
+        }
+      ]
+    },
+    {
+      "width": 128,
+      "best": {
+        "width": 128,
+        "learning_rate": 0.001,
+        "dropout": 0.0,
+        "l2_decay": 0.0001,
+        "best_val_acc": 0.8983173370361328,
+        "final_train_acc": 0.9379134774208069,
+        "test_acc": 0.8958653807640076,
+        "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width128_lr0.001_drop0.0_wd0.0001.json"
+      },
+      "runs": [
+        {
+          "width": 128,
+          "learning_rate": 0.0001,
+          "dropout": 0.0,
+          "l2_decay": 0.0,
+          "best_val_acc": 0.8800961375236511,
+          "final_train_acc": 0.8983846306800842,
+          "test_acc": 0.8768749833106995,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width128_lr0.0001_drop0.0_wd0.0.json"
+        },
+        {
+          "width": 128,
+          "learning_rate": 0.0001,
+          "dropout": 0.0,
+          "l2_decay": 0.0001,
+          "best_val_acc": 0.8779807686805725,
+          "final_train_acc": 0.8976826667785645,
+          "test_acc": 0.8800961375236511,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width128_lr0.0001_drop0.0_wd0.0001.json"
+        },
+        {
+          "width": 128,
+          "learning_rate": 0.0001,
+          "dropout": 0.2,
+          "l2_decay": 0.0,
+          "best_val_acc": 0.879855751991272,
+          "final_train_acc": 0.895480751991272,
+          "test_acc": 0.8795673251152039,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width128_lr0.0001_drop0.2_wd0.0.json"
+        },
+        {
+          "width": 128,
+          "learning_rate": 0.0001,
+          "dropout": 0.2,
+          "l2_decay": 0.0001,
+          "best_val_acc": 0.8760576844215393,
+          "final_train_acc": 0.8916442394256592,
+          "test_acc": 0.8783653974533081,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width128_lr0.0001_drop0.2_wd0.0001.json"
+        },
+        {
+          "width": 128,
+          "learning_rate": 0.0003,
+          "dropout": 0.0,
+          "l2_decay": 0.0,
+          "best_val_acc": 0.8974999785423279,
+          "final_train_acc": 0.9336346387863159,
+          "test_acc": 0.8931249976158142,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width128_lr0.0003_drop0.0_wd0.0.json"
+        },
+        {
+          "width": 128,
+          "learning_rate": 0.0003,
+          "dropout": 0.0,
+          "l2_decay": 0.0001,
+          "best_val_acc": 0.8967307806015015,
+          "final_train_acc": 0.9297115206718445,
+          "test_acc": 0.8946154117584229,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width128_lr0.0003_drop0.0_wd0.0001.json"
+        },
+        {
+          "width": 128,
+          "learning_rate": 0.0003,
+          "dropout": 0.2,
+          "l2_decay": 0.0,
+          "best_val_acc": 0.8946634531021118,
+          "final_train_acc": 0.9218654036521912,
+          "test_acc": 0.8945673108100891,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width128_lr0.0003_drop0.2_wd0.0.json"
+        },
+        {
+          "width": 128,
+          "learning_rate": 0.0003,
+          "dropout": 0.2,
+          "l2_decay": 0.0001,
+          "best_val_acc": 0.8964903950691223,
+          "final_train_acc": 0.9176538586616516,
+          "test_acc": 0.8941826820373535,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width128_lr0.0003_drop0.2_wd0.0001.json"
+        },
+        {
+          "width": 128,
+          "learning_rate": 0.001,
+          "dropout": 0.0,
+          "l2_decay": 0.0,
+          "best_val_acc": 0.8940865397453308,
+          "final_train_acc": 0.9515769481658936,
+          "test_acc": 0.8892307877540588,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width128_lr0.001_drop0.0_wd0.0.json"
+        },
+        {
+          "width": 128,
+          "learning_rate": 0.001,
+          "dropout": 0.0,
+          "l2_decay": 0.0001,
+          "best_val_acc": 0.8983173370361328,
+          "final_train_acc": 0.9379134774208069,
+          "test_acc": 0.8958653807640076,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width128_lr0.001_drop0.0_wd0.0001.json"
+        },
+        {
+          "width": 128,
+          "learning_rate": 0.001,
+          "dropout": 0.2,
+          "l2_decay": 0.0,
+          "best_val_acc": 0.8958172798156738,
+          "final_train_acc": 0.9326826930046082,
+          "test_acc": 0.892307698726654,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width128_lr0.001_drop0.2_wd0.0.json"
+        },
+        {
+          "width": 128,
+          "learning_rate": 0.001,
+          "dropout": 0.2,
+          "l2_decay": 0.0001,
+          "best_val_acc": 0.897163450717926,
+          "final_train_acc": 0.9243077039718628,
+          "test_acc": 0.8947115540504456,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width128_lr0.001_drop0.2_wd0.0001.json"
+        },
+        {
+          "width": 128,
+          "learning_rate": 0.003,
+          "dropout": 0.0,
+          "l2_decay": 0.0,
+          "best_val_acc": 0.884086549282074,
+          "final_train_acc": 0.9430673122406006,
+          "test_acc": 0.8780769109725952,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width128_lr0.003_drop0.0_wd0.0.json"
+        },
+        {
+          "width": 128,
+          "learning_rate": 0.003,
+          "dropout": 0.0,
+          "l2_decay": 0.0001,
+          "best_val_acc": 0.88692307472229,
+          "final_train_acc": 0.9123653769493103,
+          "test_acc": 0.886394202709198,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width128_lr0.003_drop0.0_wd0.0001.json"
+        },
+        {
+          "width": 128,
+          "learning_rate": 0.003,
+          "dropout": 0.2,
+          "l2_decay": 0.0,
+          "best_val_acc": 0.8802884817123413,
+          "final_train_acc": 0.9154711365699768,
+          "test_acc": 0.8774518966674805,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width128_lr0.003_drop0.2_wd0.0.json"
+        },
+        {
+          "width": 128,
+          "learning_rate": 0.003,
+          "dropout": 0.2,
+          "l2_decay": 0.0001,
+          "best_val_acc": 0.8795192241668701,
+          "final_train_acc": 0.8984230756759644,
+          "test_acc": 0.8784134387969971,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width128_lr0.003_drop0.2_wd0.0001.json"
+        }
+      ]
+    },
+    {
+      "width": 256,
+      "best": {
+        "width": 256,
+        "learning_rate": 0.0003,
+        "dropout": 0.2,
+        "l2_decay": 0.0,
+        "best_val_acc": 0.9092307686805725,
+        "final_train_acc": 0.9489327073097229,
+        "test_acc": 0.9084134697914124,
+        "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width256_lr0.0003_drop0.2_wd0.0.json"
+      },
+      "runs": [
+        {
+          "width": 256,
+          "learning_rate": 0.0001,
+          "dropout": 0.0,
+          "l2_decay": 0.0,
+          "best_val_acc": 0.9012500047683716,
+          "final_train_acc": 0.9257115125656128,
+          "test_acc": 0.8973076939582825,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width256_lr0.0001_drop0.0_wd0.0.json"
+        },
+        {
+          "width": 256,
+          "learning_rate": 0.0001,
+          "dropout": 0.0,
+          "l2_decay": 0.0001,
+          "best_val_acc": 0.8992788195610046,
+          "final_train_acc": 0.9226442575454712,
+          "test_acc": 0.896586537361145,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width256_lr0.0001_drop0.0_wd0.0001.json"
+        },
+        {
+          "width": 256,
+          "learning_rate": 0.0001,
+          "dropout": 0.2,
+          "l2_decay": 0.0,
+          "best_val_acc": 0.9004327058792114,
+          "final_train_acc": 0.9209519028663635,
+          "test_acc": 0.8992788195610046,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width256_lr0.0001_drop0.2_wd0.0.json"
+        },
+        {
+          "width": 256,
+          "learning_rate": 0.0001,
+          "dropout": 0.2,
+          "l2_decay": 0.0001,
+          "best_val_acc": 0.8992307782173157,
+          "final_train_acc": 0.9179134368896484,
+          "test_acc": 0.8967788219451904,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width256_lr0.0001_drop0.2_wd0.0001.json"
+        },
+        {
+          "width": 256,
+          "learning_rate": 0.0003,
+          "dropout": 0.0,
+          "l2_decay": 0.0,
+          "best_val_acc": 0.9029327034950256,
+          "final_train_acc": 0.9599807858467102,
+          "test_acc": 0.9031730890274048,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width256_lr0.0003_drop0.0_wd0.0.json"
+        },
+        {
+          "width": 256,
+          "learning_rate": 0.0003,
+          "dropout": 0.0,
+          "l2_decay": 0.0001,
+          "best_val_acc": 0.9065384864807129,
+          "final_train_acc": 0.952144205570221,
+          "test_acc": 0.9049038290977478,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width256_lr0.0003_drop0.0_wd0.0001.json"
+        },
+        {
+          "width": 256,
+          "learning_rate": 0.0003,
+          "dropout": 0.2,
+          "l2_decay": 0.0,
+          "best_val_acc": 0.9092307686805725,
+          "final_train_acc": 0.9489327073097229,
+          "test_acc": 0.9084134697914124,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width256_lr0.0003_drop0.2_wd0.0.json"
+        },
+        {
+          "width": 256,
+          "learning_rate": 0.0003,
+          "dropout": 0.2,
+          "l2_decay": 0.0001,
+          "best_val_acc": 0.9090384840965271,
+          "final_train_acc": 0.9417019486427307,
+          "test_acc": 0.9092307686805725,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width256_lr0.0003_drop0.2_wd0.0001.json"
+        },
+        {
+          "width": 256,
+          "learning_rate": 0.001,
+          "dropout": 0.0,
+          "l2_decay": 0.0,
+          "best_val_acc": 0.9037981033325195,
+          "final_train_acc": 0.9722115397453308,
+          "test_acc": 0.8983173370361328,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width256_lr0.001_drop0.0_wd0.0.json"
+        },
+        {
+          "width": 256,
+          "learning_rate": 0.001,
+          "dropout": 0.0,
+          "l2_decay": 0.0001,
+          "best_val_acc": 0.9059134721755981,
+          "final_train_acc": 0.9533076882362366,
+          "test_acc": 0.9049999713897705,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width256_lr0.001_drop0.0_wd0.0001.json"
+        },
+        {
+          "width": 256,
+          "learning_rate": 0.001,
+          "dropout": 0.2,
+          "l2_decay": 0.0,
+          "best_val_acc": 0.906778872013092,
+          "final_train_acc": 0.9593942165374756,
+          "test_acc": 0.9072596430778503,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width256_lr0.001_drop0.2_wd0.0.json"
+        },
+        {
+          "width": 256,
+          "learning_rate": 0.001,
+          "dropout": 0.2,
+          "l2_decay": 0.0001,
+          "best_val_acc": 0.9084615111351013,
+          "final_train_acc": 0.9426153898239136,
+          "test_acc": 0.907932698726654,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width256_lr0.001_drop0.2_wd0.0001.json"
+        },
+        {
+          "width": 256,
+          "learning_rate": 0.003,
+          "dropout": 0.0,
+          "l2_decay": 0.0,
+          "best_val_acc": 0.8924999833106995,
+          "final_train_acc": 0.9556442499160767,
+          "test_acc": 0.886346161365509,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width256_lr0.003_drop0.0_wd0.0.json"
+        },
+        {
+          "width": 256,
+          "learning_rate": 0.003,
+          "dropout": 0.0,
+          "l2_decay": 0.0001,
+          "best_val_acc": 0.8914903998374939,
+          "final_train_acc": 0.9179519414901733,
+          "test_acc": 0.890096127986908,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width256_lr0.003_drop0.0_wd0.0001.json"
+        },
+        {
+          "width": 256,
+          "learning_rate": 0.003,
+          "dropout": 0.2,
+          "l2_decay": 0.0,
+          "best_val_acc": 0.8934134840965271,
+          "final_train_acc": 0.9462692141532898,
+          "test_acc": 0.8909134864807129,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width256_lr0.003_drop0.2_wd0.0.json"
+        },
+        {
+          "width": 256,
+          "learning_rate": 0.003,
+          "dropout": 0.2,
+          "l2_decay": 0.0001,
+          "best_val_acc": 0.8942788243293762,
+          "final_train_acc": 0.9082211256027222,
+          "test_acc": 0.888942301273346,
+          "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/width_study/metrics/width256_lr0.003_drop0.2_wd0.0001.json"
+        }
+      ]
+    }
+  ]
+}

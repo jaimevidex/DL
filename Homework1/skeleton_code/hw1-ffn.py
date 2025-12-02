@@ -3,6 +3,8 @@
 # Deep Learning Homework 1
 
 import argparse
+import json
+from pathlib import Path
 
 import torch
 from torch.utils.data import DataLoader
@@ -27,8 +29,26 @@ class FeedforwardNetwork(nn.Module):
             dropout (float): dropout probability
         """
         super().__init__()
-        
-        raise NotImplementedError()
+
+        activations = {
+            "relu": nn.ReLU(),
+            "tanh": nn.Tanh(),
+        }
+        if activation_type not in activations:
+            raise ValueError(f"Unsupported activation {activation_type}")
+
+        layers_list = []
+        in_features = n_features
+        for _ in range(layers):
+            layers_list.append(nn.Linear(in_features, hidden_size))
+            layers_list.append(activations[activation_type])
+            if dropout > 0:
+                layers_list.append(nn.Dropout(dropout))
+            in_features = hidden_size
+
+        layers_list.append(nn.Linear(in_features, t))
+
+        self.network = nn.Sequential(*layers_list)
 
     def forward(self, x, **kwargs):
         """ Compute a forward pass through the FFN
@@ -37,7 +57,7 @@ class FeedforwardNetwork(nn.Module):
         Returns:
             scores (torch.Tensor)
         """
-        raise NotImplementedError()
+        return self.network(x)
     
     
 def train_batch(X, y, model, optimizer, criterion, **kwargs):
@@ -51,7 +71,12 @@ def train_batch(X, y, model, optimizer, criterion, **kwargs):
     Returns:
         loss (float)
     """
-    raise NotImplementedError()
+    optimizer.zero_grad()
+    scores = model(X)
+    loss = criterion(scores, y)
+    loss.backward()
+    optimizer.step()
+    return loss.item()
 
 
 def predict(model, X):
@@ -62,7 +87,10 @@ def predict(model, X):
     Returns:
         preds: (n_examples)
     """
-    raise NotImplementedError()
+    model.eval()
+    logits = model(X)
+    preds = torch.argmax(logits, dim=1)
+    return preds
 
 
 @torch.no_grad()
@@ -76,7 +104,11 @@ def evaluate(model, X, y, criterion):
     Returns:
         loss, accuracy (Tuple[float, float])
     """
-    raise NotImplementedError()
+    logits = model(X)
+    loss = criterion(logits, y).item()
+    preds = torch.argmax(logits, dim=1)
+    accuracy = (preds == y).float().mean().item()
+    return loss, accuracy
 
 
 def plot(epochs, plottables, filename=None, ylim=None):
@@ -95,26 +127,8 @@ def plot(epochs, plottables, filename=None, ylim=None):
         plt.savefig(filename, bbox_inches='tight')
 
 
-def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument('-epochs', default=30, type=int,
-                        help="""Number of epochs to train for. You should not
-                        need to change this value for your plots.""")
-    parser.add_argument('-batch_size', default=64, type=int,
-                        help="Size of training batch.")
-    parser.add_argument('-hidden_size', type=int, default=32)
-    parser.add_argument('-layers', type=int, default=1)
-    parser.add_argument('-learning_rate', type=float, default=0.001)
-    parser.add_argument('-l2_decay', type=float, default=0.0)
-    parser.add_argument('-dropout', type=float, default=0.0)
-    parser.add_argument('-activation',
-                        choices=['tanh', 'relu'], default='relu')
-    parser.add_argument('-optimizer',
-                        choices=['sgd', 'adam'], default='sgd')
-    parser.add_argument('-data_path', type=str, default='emnist-letters.npz',)
-    opt = parser.parse_args()
-
-    utils.configure_seed(seed=42)
+def run_training(opt):
+    utils.configure_seed(seed=getattr(opt, "seed", 42))
 
     data = utils.load_dataset(opt.data_path)
     dataset = utils.ClassificationDataset(data)
@@ -152,7 +166,8 @@ def main():
     criterion = nn.CrossEntropyLoss()
 
     # training loop
-    epochs = torch.arange(1, opt.epochs + 1)
+    epoch_range = torch.arange(1, opt.epochs + 1)
+    plot_epochs = torch.arange(0, opt.epochs + 1)
     train_losses = []
     train_accs = []
     valid_losses = []
@@ -169,7 +184,7 @@ def main():
     valid_accs.append(initial_val_acc)
     print('initial val acc: {:.4f}'.format(initial_val_acc))
 
-    for ii in epochs:
+    for ii in epoch_range:
         print('Training epoch {}'.format(ii))
         epoch_train_losses = []
         model.train()
@@ -212,11 +227,77 @@ def main():
         "Valid Loss": valid_losses,
     }
 
-    plot(epochs, losses, filename=f'{opt.model}-training-loss-{config}.pdf')
+    if not getattr(opt, "no_plots", False):
+        plot(plot_epochs, losses, filename=f'{opt.model}-training-loss-{config}.pdf')
+        val_accuracy = { "Valid Accuracy": valid_accs }
+        plot(plot_epochs, val_accuracy, filename=f'{opt.model}-validation-accuracy-{config}.pdf')
     print(f"Final Training Accuracy: {train_accs[-1]:.4f}")
     print(f"Best Validation Accuracy: {max(valid_accs):.4f}")
-    val_accuracy = { "Valid Accuracy": valid_accs }
-    plot(epochs, val_accuracy, filename=f'{opt.model}-validation-accuracy-{config}.pdf')
+
+    metrics = {
+        "epochs": plot_epochs.tolist(),
+        "train_losses": train_losses,
+        "valid_losses": valid_losses,
+        "train_accs": train_accs,
+        "valid_accs": valid_accs,
+        "final_train_acc": train_accs[-1],
+        "best_val_acc": max(valid_accs),
+        "test_acc": test_acc,
+        "config": {
+            "batch_size": opt.batch_size,
+            "hidden_size": opt.hidden_size,
+            "layers": opt.layers,
+            "learning_rate": opt.learning_rate,
+            "l2_decay": opt.l2_decay,
+            "dropout": opt.dropout,
+            "activation": opt.activation,
+            "optimizer": opt.optimizer,
+            "epochs": opt.epochs,
+            "model": opt.model,
+        }
+    }
+
+    metrics_path = getattr(opt, "metrics_path", None)
+    if metrics_path:
+        metrics_path = Path(metrics_path)
+        metrics_path.parent.mkdir(parents=True, exist_ok=True)
+        with metrics_path.open("w") as f:
+            json.dump(metrics, f)
+
+    return metrics
+
+
+def build_arg_parser():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-epochs', default=30, type=int,
+                        help="""Number of epochs to train for. You should not
+                        need to change this value for your plots.""")
+    parser.add_argument('-batch_size', default=64, type=int,
+                        help="Size of training batch.")
+    parser.add_argument('-hidden_size', type=int, default=32)
+    parser.add_argument('-layers', type=int, default=1)
+    parser.add_argument('-learning_rate', type=float, default=0.001)
+    parser.add_argument('-l2_decay', type=float, default=0.0)
+    parser.add_argument('-dropout', type=float, default=0.0)
+    parser.add_argument('-activation',
+                        choices=['tanh', 'relu'], default='relu')
+    parser.add_argument('-optimizer',
+                        choices=['sgd', 'adam'], default='sgd')
+    parser.add_argument('-data_path', type=str, default='emnist-letters.npz',)
+    parser.add_argument('-model', type=str, default='ffn',
+                        help="Model name used for saving plots.")
+    parser.add_argument('--no_plots', action='store_true',
+                        help="Skip saving matplotlib plots.")
+    parser.add_argument('--metrics_path', type=str, default=None,
+                        help="Optional path to save training metrics as JSON.")
+    parser.add_argument('--seed', type=int, default=42)
+    return parser
+
+
+def main():
+    parser = build_arg_parser()
+    opt = parser.parse_args()
+    run_training(opt)
 
 
 if __name__ == '__main__':

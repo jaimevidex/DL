@@ -75,6 +75,8 @@ class ClassificationDataset(torch.utils.data.Dataset):
 
         self.X = torch.tensor(train_X, dtype=torch.float32)
         self.y = torch.tensor(train_y, dtype=torch.long)
+        self.train_X = self.X
+        self.train_y = self.y
 
         self.dev_X = torch.tensor(dev_X, dtype=torch.float32)
         self.dev_y = torch.tensor(dev_y, dtype=torch.long)
