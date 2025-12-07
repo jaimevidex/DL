@@ -36,24 +36,37 @@ class Perceptron:
         x_i (n_features,): a single training example
         y_i (scalar): the gold label for that example
         """
-        # Todo: Q1 1(a)
-        pass
+        # Calculate scores for all classes: score = W * x
+        scores = np.dot(self.W, x_i)
+        
+        # Predict class with highest score
+        y_hat = np.argmax(scores)
+        
+        # Update weights if prediction is incorrect
+        if y_hat != y_i:
+            self.W[y_i] += x_i      # Boost score for correct class
+            self.W[y_hat] -= x_i    # Penalize score for incorrect class
 
     def train_epoch(self, X, y):
         """
         X (n_examples, n_features): features for the whole dataset
         y (n_examples,): labels for the whole dataset
         """
-        # Todo: Q1 1(a)
-        pass
+        # Iterate over every example in the dataset
+        for i in range(X.shape[0]):
+            self.update_weight(X[i], y[i])
 
     def predict(self, X):
         """
         X (n_examples, n_features)
         returns predicted labels y_hat, whose shape is (n_examples,)
         """
-        # Todo: Q1 1(a)
-        pass
+        # Compute scores for all examples at once using matrix multiplication
+        # X: (N, D), W.T: (D, C) -> Scores: (N, C)
+        scores = np.dot(X, self.W.T)
+        
+        # Return the index of the max score for each example
+        return np.argmax(scores, axis=1)
 
     def evaluate(self, X, y):
         """
@@ -62,8 +75,10 @@ class Perceptron:
 
         returns classifier accuracy
         """
-        # Todo: Q1 1(a)
-        pass
+        y_hat = self.predict(X)
+        # Calculate accuracy: fraction of predictions that match y
+        accuracy = np.mean(y_hat == y)
+        return accuracy
 
 
 def main(args):
@@ -104,9 +119,13 @@ def main(args):
 
         print('train acc: {:.4f} | val acc: {:.4f}'.format(train_acc, valid_acc))
 
-        # Todo: Q1(a)
-        # Decide whether to save the model to args.save_path based on its
-        # validation score
+        # Checkpointing logic:
+        # Save model if current validation accuracy is better than the best seen so far
+        if valid_acc > best_valid:
+            best_valid = valid_acc
+            best_epoch = i
+            model.save(args.save_path)
+            print(f"New best model saved at epoch {i} with val acc {valid_acc:.4f}")
 
     elapsed_time = time.time() - start
     minutes = int(elapsed_time // 60)
