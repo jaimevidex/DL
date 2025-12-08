@@ -1,0 +1,39 @@
+{
+  "depths": [
+    {
+      "depth": 1,
+      "best_val_acc": 0.816730797290802,
+      "final_train_acc": 0.8276538252830505,
+      "test_acc": 0.8175480961799622,
+      "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/depth_study/metrics/depth1.json"
+    },
+    {
+      "depth": 3,
+      "best_val_acc": 0.792019248008728,
+      "final_train_acc": 0.8033461570739746,
+      "test_acc": 0.7929326891899109,
+      "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/depth_study/metrics/depth3.json"
+    },
+    {
+      "depth": 5,
+      "best_val_acc": 0.7173076868057251,
+      "final_train_acc": 0.7248461246490479,
+      "test_acc": 0.7176923155784607,
+      "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/depth_study/metrics/depth5.json"
+    },
+    {
+      "depth": 7,
+      "best_val_acc": 0.6294711828231812,
+      "final_train_acc": 0.6369423270225525,
+      "test_acc": 0.6352884769439697,
+      "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/depth_study/metrics/depth7.json"
+    },
+    {
+      "depth": 9,
+      "best_val_acc": 0.5238942503929138,
+      "final_train_acc": 0.5332211256027222,
+      "test_acc": 0.52754807472229,
+      "metrics_path": "/Users/jaimevidex/Documents/MEIC/DL/Homeworks/Homework1/figures/depth_study/metrics/depth9.json"
+    }
+  ]
+}
