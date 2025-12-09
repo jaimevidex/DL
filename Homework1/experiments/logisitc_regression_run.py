@@ -165,7 +165,7 @@ def main(args):
         case "c":
             for dataset, learning_rate, l2_penalty in itertools.product(datasets, learning_rates, l2_penalties):
                 print(f"Running {dataset['name']} with LR={learning_rate} and L2={l2_penalty}...")
-                best_valid = run(learning_rate, l2_penalty, dataset, False, question, save_path, accuracy_plot, scores)
+                best_valid = run(learning_rate, l2_penalty, dataset, args.logging, question, save_path, accuracy_plot, scores)
                 stats = {
                         "dataset": dataset["name"],
                         "learning_rate": learning_rate,
@@ -173,7 +173,12 @@ def main(args):
                         "best_valid": best_valid,
                         }
                 best_valid_list.append(stats)
-                print(stats)
+                if args.logging:
+                    print(f"dataset: {stats['dataset']}")
+                    print(f"learning_rate: {stats['learning_rate']}")
+                    print(f"l2_penalty: {stats['l2_penalty']}")
+                    print(f"best_valid: {stats["best_valid"]:.4f}")
+                    print()
 
             true_best_valid = {
                     "best_valid": 0.0,
@@ -181,13 +186,14 @@ def main(args):
             for stats in best_valid_list:
                 if stats["best_valid"] > true_best_valid["best_valid"]:
                     true_best_valid = stats
-                print(f"{stats['dataset']} LR={stats['learning_rate']} L2={stats['l2_penalty']} best_valid={stats['best_valid']}")
+                print(f"{stats['dataset']} LR={stats['learning_rate']} L2={stats['l2_penalty']} best_valid={stats['best_valid']:.4f}")
+                print()
 
             print(f"The configuration with the best valid accuracy is: ")
             print(f"Dataset Structure: {true_best_valid['dataset']}")
             print(f"Learning Rate: {true_best_valid['learning_rate']}")
             print(f"L2 Penalty: {true_best_valid['l2_penalty']}")
-            print(f"Best Validation Accuracy: {true_best_valid['best_valid']}")
+            print(f"Best Validation Accuracy: {true_best_valid['best_valid']:.4f}")
 
 
 def parse_args():
@@ -201,6 +207,7 @@ def parse_args():
     parser.add_argument("--l2-penalty", type=float, default=0.00001)
     parser.add_argument("--dataset-format", type=str, choices=["normal", "pooled"], default="normal")
     parser.add_argument("--data-path", type=Path, default=Path(__file__).resolve().parents[1] / "emnist-letters.npz")
+    parser.add_argument("--logging", type=bool, default=False)
     return parser.parse_args()
 
 if __name__ == '__main__':
