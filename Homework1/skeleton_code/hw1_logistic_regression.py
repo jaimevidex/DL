@@ -34,8 +34,7 @@ class SoftmaxRegressionL2:
 
     def softmax(self, z):
         # Shift z for numerical stability
-        z_shifted = z - np.max(z)
-        e_z = np.exp(z_shifted)
+        e_z = np.exp(z)
         return e_z / np.sum(e_z)
 
 
