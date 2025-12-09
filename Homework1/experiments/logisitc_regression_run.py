@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+from pathlib import Path
+import argparse
 import numpy as np
 import os
 import sys
@@ -46,7 +48,7 @@ def apply_max_pooling(X):
     # 4. Flatten back to vectors (N, 14*14) -> (N, 196)
     return X_pooled.reshape(n_samples, -1)
 
-def run(learning_rate, l2_penalty, data, logging: bool, n_epochs=20):
+def run(learning_rate, l2_penalty, data, logging: bool, question: str, save_path: str, accuracy_plot: str, scores: str, n_epochs=20):
     X_train, y_train = data["train"]
     X_valid, y_valid = data["valid"]
     X_test, y_test = data["test"]
@@ -87,8 +89,9 @@ def run(learning_rate, l2_penalty, data, logging: bool, n_epochs=20):
         if val_acc > best_valid:
             best_valid = val_acc
             best_epoch = i
-            # model.save(save_path)
-            # print(f"New best model saved at epoch {i} with val acc {val_acc:.4f}")
+            if question == "a":
+                model.save(save_path)
+                print(f"New best model saved at epoch {i} with val acc {val_acc:.4f}")
 
         if logging:
             print()
@@ -97,17 +100,38 @@ def run(learning_rate, l2_penalty, data, logging: bool, n_epochs=20):
     minutes = int(elapsed_time // 60)
     seconds = int(elapsed_time % 60)
     print('Training took {} minutes and {} seconds'.format(minutes, seconds))
+    if question == "a":
+        print("Reloading best checkpoint")
+        best_model: lr.SoftmaxRegressionL2 = lr.SoftmaxRegressionL2.load(save_path)
+        test_pred = best_model.predict(X_test)
+        test_acc = np.mean(test_pred == y_test)
+
+        print('Best model test acc: {:.4f}'.format(test_acc))
+
+        utils.plot(
+            "Epoch", "Accuracy",
+            {"train": (epochs, train_acc_history), "valid": (epochs, val_acc_history)},
+            filename=accuracy_plot
+        )
+
+        with open(scores, "w") as f:
+            json.dump(
+                {"best_valid": float(best_valid),
+                 "selected_epoch": int(best_epoch),
+                 "test": float(test_acc),
+                 "time": elapsed_time},
+                f,
+                indent=4
+            )
 
     return best_valid
 
-
-
-def main():
-    data_path = "emnist-letters.npz"
-    dumps_dir = "Q1-2-results"
-    save_path = "{}/Q1-2-logistic-a.pkl".format(dumps_dir)
-    accuracy_plot = "{}/Q1-2-logistic-a.pdf".format(dumps_dir)
-    scores = "{}/Q1-2-scores.json".format(dumps_dir)
+def main(args):
+    question = args.question
+    data_path = args.data_path
+    save_path = args.save_path
+    accuracy_plot = args.accuracy_plot
+    scores = args.scores
 
     data = utils.load_dataset(data_path=data_path)
 
@@ -128,54 +152,57 @@ def main():
 
     best_valid_list = []
 
-    for dataset, learning_rate, l2_penalty in itertools.product(datasets, learning_rates, l2_penalties):
-        print(f"Running {dataset['name']} with LR={learning_rate} and L2={l2_penalty}...")
-        best_valid = run(learning_rate, l2_penalty, dataset, False)
-        stats = {
-                "dataset": dataset["name"],
-                "learning_rate": learning_rate,
-                "l2_penalty": l2_penalty,
-                "best_valid": best_valid,
-                }
-        best_valid_list.append(stats)
-        print(stats)
+    dataset = {}
+    match args.dataset_format:
+        case "normal":
+            dataset = datasets[0]
+        case "pooled":
+            dataset = datasets[1]
 
-    true_best_valid = {
-            "best_valid": 0.0,
-            }
-    for stats in best_valid_list:
-        if stats["best_valid"] > true_best_valid["best_valid"]:
-            true_best_valid = stats
-        print(f"{stats['dataset']} LR={stats['learning_rate']} L2={stats['l2_penalty']} best_valid={stats['best_valid']}")
+    match question:
+        case "a":
+            run(args.learning_rate, args.l2_penalty, dataset, True, question, save_path, accuracy_plot, scores)
+        case "c":
+            for dataset, learning_rate, l2_penalty in itertools.product(datasets, learning_rates, l2_penalties):
+                print(f"Running {dataset['name']} with LR={learning_rate} and L2={l2_penalty}...")
+                best_valid = run(learning_rate, l2_penalty, dataset, False, question, save_path, accuracy_plot, scores)
+                stats = {
+                        "dataset": dataset["name"],
+                        "learning_rate": learning_rate,
+                        "l2_penalty": l2_penalty,
+                        "best_valid": best_valid,
+                        }
+                best_valid_list.append(stats)
+                print(stats)
 
-    print(f"The configuration with the best valid accuracy is: ")
-    print(f"Dataset Structure: {true_best_valid['dataset']}")
-    print(f"Learning Rate: {true_best_valid['learning_rate']}")
-    print(f"L2 Penalty: {true_best_valid['l2_penalty']}")
-    print(f"Best Validation Accuracy: {true_best_valid['best_valid']}")
+            true_best_valid = {
+                    "best_valid": 0.0,
+                    }
+            for stats in best_valid_list:
+                if stats["best_valid"] > true_best_valid["best_valid"]:
+                    true_best_valid = stats
+                print(f"{stats['dataset']} LR={stats['learning_rate']} L2={stats['l2_penalty']} best_valid={stats['best_valid']}")
 
-    # print("Reloading best checkpoint")
-    # best_model: lr.SoftmaxRegressionL2 = lr.SoftmaxRegressionL2.load(save_path)
-    # test_pred = best_model.predict(X_test)
-    # test_acc = np.mean(test_pred == y_test)
-    #
-    # print('Best model test acc: {:.4f}'.format(test_acc))
-    #
-    # utils.plot(
-    #     "Epoch", "Accuracy",
-    #     {"train": (epochs, train_acc_history), "valid": (epochs, val_acc_history)},
-    #     filename=accuracy_plot
-    # )
-    #
-    # with open(scores, "w") as f:
-    #     json.dump(
-    #         {"best_valid": float(best_valid),
-    #          "selected_epoch": int(best_epoch),
-    #          "test": float(test_acc),
-    #          "time": elapsed_time},
-    #         f,
-    #         indent=4
-    #     )
+            print(f"The configuration with the best valid accuracy is: ")
+            print(f"Dataset Structure: {true_best_valid['dataset']}")
+            print(f"Learning Rate: {true_best_valid['learning_rate']}")
+            print(f"L2 Penalty: {true_best_valid['l2_penalty']}")
+            print(f"Best Validation Accuracy: {true_best_valid['best_valid']}")
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(description="Run logistic regression for Question 2.")
+    parser.add_argument("-q", "--question", type=str, choices=["a", "c"], default="a", required=True)
+    parser.add_argument("--save-path", type=Path, default=Path(__file__).resolve().parents[1] / "results" / "logistic_regression" / "a" / "Q1-2-logistic-a.pkl")
+    parser.add_argument("--accuracy-plot", type=Path, default=Path(__file__).resolve().parents[1] / "results" / "logistic_regression" / "a" / "Q1-2-logistic-a.pdf")
+    parser.add_argument("--scores", type=Path, default=Path(__file__).resolve().parents[1] / "results" / "logistic_regression" / "a" / "Q1-2-scores.json")
+    parser.add_argument("--epochs", type=int, default=20)
+    parser.add_argument("--learning-rate", type=float, default=0.0001)
+    parser.add_argument("--l2-penalty", type=float, default=0.00001)
+    parser.add_argument("--dataset-format", type=str, choices=["normal", "pooled"], default="normal")
+    parser.add_argument("--data-path", type=Path, default=Path(__file__).resolve().parents[1] / "emnist-letters.npz")
+    return parser.parse_args()
 
 if __name__ == '__main__':
-    main()
+    args = parse_args()
+    main(args)
