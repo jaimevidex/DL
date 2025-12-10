@@ -1,0 +1,83 @@
+{
+    "dataset_structure": "original",
+    "learning_rate": 0.0001,
+    "l2_penalty": 0.00001,
+    "best_validation_accuracy": 0.6940
+}
+
+{
+    "dataset_structure": "original",
+    "learning_rate": 0.0001,
+    "l2_penalty": 0.0001,
+    "best_validation_accuracy": 0.6951
+}
+
+{
+    "dataset_structure": "original",
+    "learning_rate": 0.001,
+    "l2_penalty": 0.00001,
+    "best_validation_accuracy": 0.7192
+}
+
+{
+    "dataset_structure": "original",
+    "learning_rate": 0.001,
+    "l2_penalty": 0.0001,
+    "best_validation_accuracy": 0.7195
+}
+
+{
+    "dataset_structure": "original",
+    "learning_rate": 0.01,
+    "l2_penalty": 0.00001,
+    "best_validation_accuracy": 0.6992
+}
+
+{
+    "dataset_structure": "original",
+    "learning_rate": 0.01,
+    "l2_penalty": 0.0001,
+    "best_validation_accuracy": 0.6948
+}
+
+{
+    "dataset_structure": "pooled",
+    "learning_rate": 0.0001,
+    "l2_penalty": 0.00001,
+    "best_validation_accuracy": 0.6668
+}
+
+{
+    "dataset_structure": "pooled",
+    "learning_rate": 0.0001,
+    "l2_penalty": 0.0001,
+    "best_validation_accuracy": 0.6680
+}
+
+{
+    "dataset_structure": "pooled",
+    "learning_rate": 0.001,
+    "l2_penalty": 0.00001,
+    "best_validation_accuracy": 0.7091
+}
+
+{
+    "dataset_structure": "pooled",
+    "learning_rate": 0.001,
+    "l2_penalty": 0.0001,
+    "best_validation_accuracy": 0.7095
+}
+
+{
+    "dataset_structure": "pooled",
+    "learning_rate": 0.01,
+    "l2_penalty": 0.00001,
+    "best_validation_accuracy": 0.7086
+}
+
+{
+    "dataset_structure": "pooled",
+    "learning_rate": 0.01,
+    "l2_penalty": 0.0001,
+    "best_validation_accuracy": 0.7067
+}

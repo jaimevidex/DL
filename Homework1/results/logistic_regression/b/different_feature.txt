@@ -1,0 +1,4 @@
+Max pooling with a 2x2 window:
+Initially, I considered using 4x4 Average Pooling to reduce the feature space. However, experiments showed that while training was significantly faster, accuracy dropped because the images became "washed out" (e.g., a distinct white pixel averaged with black background becomes a faint gray value, losing contrast).
+
+To solve this, I implemented 2x2 Max Pooling. Instead of averaging, this method selects the maximum value in each 2x2 block. This ensures that if a stroke (white pixel) exists in a block, the signal is preserved rather than diluted. This approach improved robustness to small shifts in letter positioning and reduced the input dimensionality from 784 to 196. Empirically, this reduced training time from ~1m 20s to ~35s with negligible loss in accuracy.

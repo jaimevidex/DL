@@ -1,0 +1,6 @@
+{
+    "dataset_structure": "original",
+    "learning_rate": 0.001,
+    "l2_penalty": 0.0001,
+    "best_validation_accuracy": 0.7195
+}
