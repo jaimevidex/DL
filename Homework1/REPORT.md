@@ -1,5 +1,7 @@
 # Homework 1
 
+**Group 14 Contributions:** Henrique Machado (ist103202) completed Question 1, Jaime Silva (ist112464) completed Question 2, and Gil Arroteia (ist112466) completed Question 3.
+
 ## Question 1
 
 ### 1(a)
