@@ -2,5 +2,8 @@
     "dataset_structure": "original",
     "learning_rate": 0.001,
     "l2_penalty": 0.0001,
-    "best_validation_accuracy": 0.7195
+    "best_valid": 0.7183653846153846,
+    "selected_epoch": 19,
+    "test": 0.7213461538461539,
+    "time": 84.31081295013428
 }

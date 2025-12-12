@@ -198,7 +198,7 @@ def main(args):
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Run logistic regression for Question 2.")
-    parser.add_argument("-q", "--question", type=str, choices=["a", "c"], default="a", required=True)
+    parser.add_argument("-q", "--question", type=str, choices=["a", "c"], required=True)
     parser.add_argument("--save-path", type=Path, default=Path(__file__).resolve().parents[1] / "results" / "logistic_regression" / "a" / "Q1-2-logistic-a.pkl")
     parser.add_argument("--accuracy-plot", type=Path, default=Path(__file__).resolve().parents[1] / "results" / "logistic_regression" / "a" / "Q1-2-logistic-a.pdf")
     parser.add_argument("--scores", type=Path, default=Path(__file__).resolve().parents[1] / "results" / "logistic_regression" / "a" / "Q1-2-scores.json")

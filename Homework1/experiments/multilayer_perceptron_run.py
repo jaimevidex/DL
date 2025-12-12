@@ -19,9 +19,10 @@ import skeleton_code.utils as utils
 
 def main():
     data_path = Path(__file__).resolve().parents[1] / "emnist-letters.npz"
-    save_path = Path(__file__).resolve().parents[1] / "results" / "multilayer_perceptron" / "Q1-2-mlp-a.pkl"
-    accuracy_plot = Path(__file__).resolve().parents[1] / "results" / "multilayer_perceptron" / "Q1-2-mlp-a.pdf"
-    scores = Path(__file__).resolve().parents[1] / "results" / "multilayer_perceptron" / "Q1-2-scores.json"
+    save_path = Path(__file__).resolve().parents[1] / "results" / "multilayer_perceptron" / "Q1-3-mlp.pkl"
+    accuracy_plot = Path(__file__).resolve().parents[1] / "results" / "multilayer_perceptron" / "Q1-3-mlp-accuracy.pdf"
+    loss_plot = Path(__file__).resolve().parents[1] / "results" / "multilayer_perceptron" / "Q1-3-mlp-loss.pdf"
+    scores = Path(__file__).resolve().parents[1] / "results" / "multilayer_perceptron" / "Q1-3-scores.json"
     data = utils.load_dataset(data_path=data_path)
 
     X_train, y_train = data["train"]
@@ -87,8 +88,14 @@ def main():
 
     utils.plot(
         "Epoch", "Accuracy",
-        {"train": (epochs, train_acc_history), "valid": (epochs, val_acc_history), "loss": (epochs, loss_history)},
+        {"train": (epochs, train_acc_history), "valid": (epochs, val_acc_history)},
         filename=accuracy_plot
+    )
+
+    utils.plot(
+        "Epoch", "Loss",
+        {"loss": (epochs, loss_history)},
+        filename=loss_plot
     )
 
     with open(scores, "w") as f:
