@@ -1,0 +1,642 @@
+{
+  "cnn": {
+    "all_trials": [
+      {
+        "config": {
+          "num_filters": 128,
+          "filter_sizes": [
+            3,
+            5
+          ],
+          "dropout_rate": 0.0,
+          "hidden_units": 256,
+          "num_dense_layers": 2
+        },
+        "learning_rate": 0.0005,
+        "best_val_correlation": 0.6359479427337646,
+        "final_val_loss": 0.3958502781406954,
+        "num_epochs_trained": 18
+      },
+      {
+        "config": {
+          "num_filters": 32,
+          "filter_sizes": [
+            5,
+            7
+          ],
+          "dropout_rate": 0.0,
+          "hidden_units": 256,
+          "num_dense_layers": 3
+        },
+        "learning_rate": 0.005,
+        "best_val_correlation": 0.6491372585296631,
+        "final_val_loss": 0.3717988204971865,
+        "num_epochs_trained": 29
+      },
+      {
+        "config": {
+          "num_filters": 32,
+          "filter_sizes": [
+            3,
+            5
+          ],
+          "dropout_rate": 0.0,
+          "hidden_units": 64,
+          "num_dense_layers": 1
+        },
+        "learning_rate": 0.0005,
+        "best_val_correlation": 0.6054456830024719,
+        "final_val_loss": 0.39802140436216754,
+        "num_epochs_trained": 18
+      },
+      {
+        "config": {
+          "num_filters": 128,
+          "filter_sizes": [
+            5,
+            7
+          ],
+          "dropout_rate": 0.4,
+          "hidden_units": 256,
+          "num_dense_layers": 2
+        },
+        "learning_rate": 0.005,
+        "best_val_correlation": 0.5683221220970154,
+        "final_val_loss": 0.8866697444286523,
+        "num_epochs_trained": 13
+      },
+      {
+        "config": {
+          "num_filters": 128,
+          "filter_sizes": [
+            3,
+            5,
+            7
+          ],
+          "dropout_rate": 0.0,
+          "hidden_units": 64,
+          "num_dense_layers": 3
+        },
+        "learning_rate": 0.001,
+        "best_val_correlation": 0.6558710932731628,
+        "final_val_loss": 0.3507054448918259,
+        "num_epochs_trained": 17
+      },
+      {
+        "config": {
+          "num_filters": 64,
+          "filter_sizes": [
+            3,
+            5
+          ],
+          "dropout_rate": 0.0,
+          "hidden_units": 128,
+          "num_dense_layers": 1
+        },
+        "learning_rate": 0.005,
+        "best_val_correlation": 0.6339333653450012,
+        "final_val_loss": 0.3802362560277276,
+        "num_epochs_trained": 21
+      },
+      {
+        "config": {
+          "num_filters": 32,
+          "filter_sizes": [
+            3,
+            5,
+            7
+          ],
+          "dropout_rate": 0.2,
+          "hidden_units": 256,
+          "num_dense_layers": 2
+        },
+        "learning_rate": 0.005,
+        "best_val_correlation": 0.5892269611358643,
+        "final_val_loss": 0.8082928791325984,
+        "num_epochs_trained": 18
+      },
+      {
+        "config": {
+          "num_filters": 128,
+          "filter_sizes": [
+            3,
+            5
+          ],
+          "dropout_rate": 0.2,
+          "hidden_units": 64,
+          "num_dense_layers": 3
+        },
+        "learning_rate": 0.001,
+        "best_val_correlation": 0.5910393595695496,
+        "final_val_loss": 0.648165037722107,
+        "num_epochs_trained": 13
+      },
+      {
+        "config": {
+          "num_filters": 128,
+          "filter_sizes": [
+            3,
+            5
+          ],
+          "dropout_rate": 0.4,
+          "hidden_units": 64,
+          "num_dense_layers": 1
+        },
+        "learning_rate": 0.001,
+        "best_val_correlation": 0.569998025894165,
+        "final_val_loss": 0.9585335660597374,
+        "num_epochs_trained": 28
+      },
+      {
+        "config": {
+          "num_filters": 32,
+          "filter_sizes": [
+            3,
+            5
+          ],
+          "dropout_rate": 0.0,
+          "hidden_units": 128,
+          "num_dense_layers": 2
+        },
+        "learning_rate": 0.001,
+        "best_val_correlation": 0.6219563484191895,
+        "final_val_loss": 0.3984341894718633,
+        "num_epochs_trained": 30
+      },
+      {
+        "config": {
+          "num_filters": 32,
+          "filter_sizes": [
+            3,
+            5,
+            7
+          ],
+          "dropout_rate": 0.2,
+          "hidden_units": 64,
+          "num_dense_layers": 3
+        },
+        "learning_rate": 0.0001,
+        "best_val_correlation": 0.54844731092453,
+        "final_val_loss": 0.7616671492155414,
+        "num_epochs_trained": 31
+      },
+      {
+        "config": {
+          "num_filters": 128,
+          "filter_sizes": [
+            5,
+            7
+          ],
+          "dropout_rate": 0.0,
+          "hidden_units": 256,
+          "num_dense_layers": 3
+        },
+        "learning_rate": 0.0005,
+        "best_val_correlation": 0.6422030329704285,
+        "final_val_loss": 0.37380324225052597,
+        "num_epochs_trained": 19
+      },
+      {
+        "config": {
+          "num_filters": 64,
+          "filter_sizes": [
+            3,
+            5,
+            7
+          ],
+          "dropout_rate": 0.2,
+          "hidden_units": 256,
+          "num_dense_layers": 3
+        },
+        "learning_rate": 0.001,
+        "best_val_correlation": 0.5781660079956055,
+        "final_val_loss": 0.6312631150455627,
+        "num_epochs_trained": 14
+      },
+      {
+        "config": {
+          "num_filters": 32,
+          "filter_sizes": [
+            3,
+            5
+          ],
+          "dropout_rate": 0.0,
+          "hidden_units": 128,
+          "num_dense_layers": 2
+        },
+        "learning_rate": 0.0001,
+        "best_val_correlation": 0.586405873298645,
+        "final_val_loss": 0.4173192215060682,
+        "num_epochs_trained": 20
+      },
+      {
+        "config": {
+          "num_filters": 32,
+          "filter_sizes": [
+            5,
+            7
+          ],
+          "dropout_rate": 0.4,
+          "hidden_units": 128,
+          "num_dense_layers": 1
+        },
+        "learning_rate": 0.005,
+        "best_val_correlation": 0.5477339029312134,
+        "final_val_loss": 0.8769198780587877,
+        "num_epochs_trained": 27
+      },
+      {
+        "config": {
+          "num_filters": 128,
+          "filter_sizes": [
+            3,
+            5,
+            7
+          ],
+          "dropout_rate": 0.0,
+          "hidden_units": 128,
+          "num_dense_layers": 1
+        },
+        "learning_rate": 0.001,
+        "best_val_correlation": 0.6389455199241638,
+        "final_val_loss": 0.3751501531070913,
+        "num_epochs_trained": 18
+      },
+      {
+        "config": {
+          "num_filters": 128,
+          "filter_sizes": [
+            5,
+            7
+          ],
+          "dropout_rate": 0.2,
+          "hidden_units": 256,
+          "num_dense_layers": 2
+        },
+        "learning_rate": 0.0005,
+        "best_val_correlation": 0.5882990956306458,
+        "final_val_loss": 0.5622886181351993,
+        "num_epochs_trained": 21
+      },
+      {
+        "config": {
+          "num_filters": 32,
+          "filter_sizes": [
+            5,
+            7
+          ],
+          "dropout_rate": 0.2,
+          "hidden_units": 64,
+          "num_dense_layers": 1
+        },
+        "learning_rate": 0.0005,
+        "best_val_correlation": 0.48136383295059204,
+        "final_val_loss": 0.6990286589671786,
+        "num_epochs_trained": 12
+      },
+      {
+        "config": {
+          "num_filters": 128,
+          "filter_sizes": [
+            3,
+            5
+          ],
+          "dropout_rate": 0.4,
+          "hidden_units": 128,
+          "num_dense_layers": 3
+        },
+        "learning_rate": 0.005,
+        "best_val_correlation": 0.5189822912216187,
+        "final_val_loss": 0.9916821390153242,
+        "num_epochs_trained": 15
+      },
+      {
+        "config": {
+          "num_filters": 64,
+          "filter_sizes": [
+            5,
+            7
+          ],
+          "dropout_rate": 0.2,
+          "hidden_units": 256,
+          "num_dense_layers": 2
+        },
+        "learning_rate": 0.0001,
+        "best_val_correlation": 0.6128329634666443,
+        "final_val_loss": 0.7437399642329554,
+        "num_epochs_trained": 43
+      }
+    ],
+    "best_config": {
+      "config": {
+        "num_filters": 128,
+        "filter_sizes": [
+          3,
+          5,
+          7
+        ],
+        "dropout_rate": 0.0,
+        "hidden_units": 64,
+        "num_dense_layers": 3
+      },
+      "learning_rate": 0.001,
+      "best_val_correlation": 0.6558710932731628
+    }
+  },
+  "lstm": {
+    "all_trials": [
+      {
+        "config": {
+          "lstm_hidden_size": 256,
+          "num_lstm_layers": 1,
+          "dropout_rate": 0.0,
+          "dense_units": 256,
+          "aggregation": "mean",
+          "use_embedding": false
+        },
+        "learning_rate": 0.0005,
+        "best_val_correlation": 0.6658459901809692,
+        "final_val_loss": 0.33158407065849405,
+        "num_epochs_trained": 35
+      },
+      {
+        "config": {
+          "lstm_hidden_size": 256,
+          "num_lstm_layers": 1,
+          "dropout_rate": 0.4,
+          "dense_units": 256,
+          "aggregation": "last",
+          "use_embedding": true
+        },
+        "learning_rate": 0.0001,
+        "best_val_correlation": 0.6732410192489624,
+        "final_val_loss": 0.34226661414619464,
+        "num_epochs_trained": 77
+      },
+      {
+        "config": {
+          "lstm_hidden_size": 64,
+          "num_lstm_layers": 1,
+          "dropout_rate": 0.0,
+          "dense_units": 256,
+          "aggregation": "last",
+          "use_embedding": false
+        },
+        "learning_rate": 0.0005,
+        "best_val_correlation": 0.6560267806053162,
+        "final_val_loss": 0.33819344908552396,
+        "num_epochs_trained": 64
+      },
+      {
+        "config": {
+          "lstm_hidden_size": 128,
+          "num_lstm_layers": 2,
+          "dropout_rate": 0.0,
+          "dense_units": 64,
+          "aggregation": "mean",
+          "use_embedding": true
+        },
+        "learning_rate": 0.0005,
+        "best_val_correlation": 0.6716655492782593,
+        "final_val_loss": 0.3296072247094754,
+        "num_epochs_trained": 24
+      },
+      {
+        "config": {
+          "lstm_hidden_size": 64,
+          "num_lstm_layers": 2,
+          "dropout_rate": 0.0,
+          "dense_units": 64,
+          "aggregation": "mean",
+          "use_embedding": false
+        },
+        "learning_rate": 0.001,
+        "best_val_correlation": 0.6708806753158569,
+        "final_val_loss": 0.33523298262443085,
+        "num_epochs_trained": 37
+      },
+      {
+        "config": {
+          "lstm_hidden_size": 256,
+          "num_lstm_layers": 2,
+          "dropout_rate": 0.0,
+          "dense_units": 256,
+          "aggregation": "mean",
+          "use_embedding": false
+        },
+        "learning_rate": 0.0001,
+        "best_val_correlation": 0.6485569477081299,
+        "final_val_loss": 0.3548561987178079,
+        "num_epochs_trained": 37
+      },
+      {
+        "config": {
+          "lstm_hidden_size": 256,
+          "num_lstm_layers": 2,
+          "dropout_rate": 0.4,
+          "dense_units": 256,
+          "aggregation": "mean",
+          "use_embedding": false
+        },
+        "learning_rate": 0.0001,
+        "best_val_correlation": 0.6682087779045105,
+        "final_val_loss": 0.3565044878569459,
+        "num_epochs_trained": 84
+      },
+      {
+        "config": {
+          "lstm_hidden_size": 256,
+          "num_lstm_layers": 1,
+          "dropout_rate": 0.2,
+          "dense_units": 64,
+          "aggregation": "last",
+          "use_embedding": false
+        },
+        "learning_rate": 0.001,
+        "best_val_correlation": 0.6727291941642761,
+        "final_val_loss": 0.3289695943036272,
+        "num_epochs_trained": 39
+      },
+      {
+        "config": {
+          "lstm_hidden_size": 128,
+          "num_lstm_layers": 2,
+          "dropout_rate": 0.0,
+          "dense_units": 128,
+          "aggregation": "mean",
+          "use_embedding": false
+        },
+        "learning_rate": 0.0001,
+        "best_val_correlation": 0.6232941746711731,
+        "final_val_loss": 0.3675982294806751,
+        "num_epochs_trained": 50
+      },
+      {
+        "config": {
+          "lstm_hidden_size": 256,
+          "num_lstm_layers": 1,
+          "dropout_rate": 0.4,
+          "dense_units": 256,
+          "aggregation": "last",
+          "use_embedding": false
+        },
+        "learning_rate": 0.005,
+        "best_val_correlation": 0.6448728442192078,
+        "final_val_loss": 0.38268391282077807,
+        "num_epochs_trained": 53
+      },
+      {
+        "config": {
+          "lstm_hidden_size": 128,
+          "num_lstm_layers": 1,
+          "dropout_rate": 0.4,
+          "dense_units": 128,
+          "aggregation": "last",
+          "use_embedding": false
+        },
+        "learning_rate": 0.001,
+        "best_val_correlation": 0.6701803207397461,
+        "final_val_loss": 0.33519381421077155,
+        "num_epochs_trained": 55
+      },
+      {
+        "config": {
+          "lstm_hidden_size": 128,
+          "num_lstm_layers": 2,
+          "dropout_rate": 0.0,
+          "dense_units": 64,
+          "aggregation": "mean",
+          "use_embedding": false
+        },
+        "learning_rate": 0.005,
+        "best_val_correlation": 0.6622952818870544,
+        "final_val_loss": 0.3610957425571879,
+        "num_epochs_trained": 33
+      },
+      {
+        "config": {
+          "lstm_hidden_size": 256,
+          "num_lstm_layers": 2,
+          "dropout_rate": 0.0,
+          "dense_units": 128,
+          "aggregation": "last",
+          "use_embedding": false
+        },
+        "learning_rate": 0.005,
+        "best_val_correlation": 0.6407784223556519,
+        "final_val_loss": 99.84567748456799,
+        "num_epochs_trained": 33
+      },
+      {
+        "config": {
+          "lstm_hidden_size": 256,
+          "num_lstm_layers": 2,
+          "dropout_rate": 0.2,
+          "dense_units": 64,
+          "aggregation": "last",
+          "use_embedding": true
+        },
+        "learning_rate": 0.0001,
+        "best_val_correlation": 0.6770474910736084,
+        "final_val_loss": 0.3318367257951425,
+        "num_epochs_trained": 55
+      },
+      {
+        "config": {
+          "lstm_hidden_size": 64,
+          "num_lstm_layers": 1,
+          "dropout_rate": 0.4,
+          "dense_units": 64,
+          "aggregation": "mean",
+          "use_embedding": false
+        },
+        "learning_rate": 0.005,
+        "best_val_correlation": 0.6466742157936096,
+        "final_val_loss": 0.3906406951915048,
+        "num_epochs_trained": 27
+      },
+      {
+        "config": {
+          "lstm_hidden_size": 256,
+          "num_lstm_layers": 2,
+          "dropout_rate": 0.4,
+          "dense_units": 128,
+          "aggregation": "last",
+          "use_embedding": false
+        },
+        "learning_rate": 0.001,
+        "best_val_correlation": 0.6679269671440125,
+        "final_val_loss": 0.37942585748291774,
+        "num_epochs_trained": 38
+      },
+      {
+        "config": {
+          "lstm_hidden_size": 64,
+          "num_lstm_layers": 2,
+          "dropout_rate": 0.2,
+          "dense_units": 64,
+          "aggregation": "mean",
+          "use_embedding": false
+        },
+        "learning_rate": 0.0005,
+        "best_val_correlation": 0.6772805452346802,
+        "final_val_loss": 0.3413697146175711,
+        "num_epochs_trained": 69
+      },
+      {
+        "config": {
+          "lstm_hidden_size": 256,
+          "num_lstm_layers": 1,
+          "dropout_rate": 0.4,
+          "dense_units": 128,
+          "aggregation": "last",
+          "use_embedding": false
+        },
+        "learning_rate": 0.0005,
+        "best_val_correlation": 0.6741132140159607,
+        "final_val_loss": 0.33224769098689133,
+        "num_epochs_trained": 56
+      },
+      {
+        "config": {
+          "lstm_hidden_size": 256,
+          "num_lstm_layers": 1,
+          "dropout_rate": 0.4,
+          "dense_units": 128,
+          "aggregation": "mean",
+          "use_embedding": false
+        },
+        "learning_rate": 0.001,
+        "best_val_correlation": 0.6736090779304504,
+        "final_val_loss": 0.3321826619637107,
+        "num_epochs_trained": 43
+      },
+      {
+        "config": {
+          "lstm_hidden_size": 128,
+          "num_lstm_layers": 1,
+          "dropout_rate": 0.0,
+          "dense_units": 64,
+          "aggregation": "last",
+          "use_embedding": false
+        },
+        "learning_rate": 0.0001,
+        "best_val_correlation": 0.6404115557670593,
+        "final_val_loss": 0.3623581634197058,
+        "num_epochs_trained": 81
+      }
+    ],
+    "best_config": {
+      "config": {
+        "lstm_hidden_size": 64,
+        "num_lstm_layers": 2,
+        "dropout_rate": 0.2,
+        "dense_units": 64,
+        "aggregation": "mean",
+        "use_embedding": false
+      },
+      "learning_rate": 0.0005,
+      "best_val_correlation": 0.6772805452346802
+    }
+  }
+}
