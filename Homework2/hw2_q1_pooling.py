@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
 
-
-#https://github.com/MedMNIST/MedMNIST
-
-
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -15,8 +11,13 @@ import time
 import matplotlib.pyplot as plt
 from sklearn.metrics import accuracy_score
 
-# Define device
-device = "cuda" if torch.cuda.is_available() else "cpu"
+# Define device (Updated to include Mac M1/M2/M3 support)
+device = "cpu"
+if torch.cuda.is_available():
+    device = "cuda"
+elif hasattr(torch.backends, "mps") and torch.backends.mps.is_available():
+    device = "mps"
+    
 print(f"Using device: {device}")
 
 # --------------------------------------------------------------
@@ -69,15 +70,17 @@ class SimpleCNN(nn.Module):
         # 3. Convolution layer: 64 -> 128 output channels
         self.conv3 = nn.Conv2d(in_channels=64, out_channels=128, kernel_size=3, stride=1, padding=1)
         
-        # Calculation for Linear Layer Input:
+        # Max Pooling Layer
+        self.pool = nn.MaxPool2d(kernel_size=2, stride=2)
+
+        # Calculation for Linear Layer Input with MaxPool:
         # Input image is 28x28.
-        # Conv1 (pad=1) -> 28x28
-        # Conv2 (pad=1) -> 28x28
-        # Conv3 (pad=1) -> 28x28
-        # Final block output shape: (128 channels, 28 height, 28 width)
-        # Hint says: number_of_output_channels * output_width * output_height
-        # Flattened size = 128 * 28 * 28 = 100,352
-        self.flattened_size = 128 * 28 * 28
+        # Block 1: Conv(28x28) -> Pool(2) -> 14x14
+        # Block 2: Conv(14x14) -> Pool(2) -> 7x7
+        # Block 3: Conv(7x7)   -> Pool(2) -> 3x3 (integer floor of 7/2)
+        # Final block output shape: (128 channels, 3 height, 3 width)
+        # Flattened size = 128 * 3 * 3 = 1,152
+        self.flattened_size = 128 * 3 * 3
         
         # 4. Linear Layer: Flattened Input -> 256 features
         self.fc1 = nn.Linear(self.flattened_size, 256)
@@ -89,14 +92,17 @@ class SimpleCNN(nn.Module):
         # Block 1
         x = self.conv1(x)
         x = F.relu(x)
+        x = self.pool(x) # Added MaxPool
         
         # Block 2
         x = self.conv2(x)
         x = F.relu(x)
+        x = self.pool(x) # Added MaxPool
         
         # Block 3
         x = self.conv3(x)
         x = F.relu(x)
+        x = self.pool(x) # Added MaxPool
         
         # Flatten
         # x.size(0) is the batch size

@@ -1,2 +1,7 @@
 .DS_Store
 /Homework2/hw2_q2/data
+Homework2/hw2_q2/data/
+Homework2/hw2_q2/code/results/
+*.pyc
+__pycache__/
+.DS_Store
