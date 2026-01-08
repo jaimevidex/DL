@@ -1,0 +1,2 @@
+Test accuracy (of model with best Val Acc): 0.9205 (21.39mins)
+Test Accuracy (of model with best Val Acc and Softmax): 0.5709 (20.75mins)
