@@ -1,0 +1,8 @@
+*.pt
+*.pth
+*.h5
+*.pkl
+Homework2/hw2_q2/results/mha_study/
+Homework2/hw2_q2/results/attention_study/
+Homework2/hw2_q2/results/attention_study/best_model.pt
+Homework2/hw2_q2/results/mha_study/best_model.pt
