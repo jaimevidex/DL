@@ -1,0 +1,2 @@
+Test Accuracy (of pooled model with best Val Acc): 0.9424 (12.33 mins)
+Test Accuracy (of pooled model with best Val Acc and Softmax): 0.9322 (11.98 mins)
